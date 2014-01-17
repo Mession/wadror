@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42b844d0-7647-42c8-922e-e79173b6370d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ratebeer.iml" afterPath="$PROJECT_DIR$/.idea/ratebeer.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
     </list>
     <ignored path="ratebeer.iws" />
@@ -79,7 +78,7 @@
       <file leaf-file-name="production.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="30" selection-start="1268" selection-end="1268" vertical-scroll-proportion="0.7258065" vertical-offset="165" max-vertical-offset="1290">
+            <state line="29" column="31" selection-start="1269" selection-end="1269" vertical-scroll-proportion="0.7258065" vertical-offset="165" max-vertical-offset="1290">
               <folding />
             </state>
           </provider>
@@ -693,7 +692,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="30" selection-start="1268" selection-end="1268" vertical-scroll-proportion="0.7258065" vertical-offset="165" max-vertical-offset="1290">
+        <state line="29" column="31" selection-start="1269" selection-end="1269" vertical-scroll-proportion="0.7258065" vertical-offset="165" max-vertical-offset="1290">
           <folding />
         </state>
       </provider>
