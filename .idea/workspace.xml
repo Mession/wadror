@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="42b844d0-7647-42c8-922e-e79173b6370d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ratebeer.iml" afterPath="$PROJECT_DIR$/.idea/ratebeer.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
     </list>
     <ignored path="ratebeer.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,7 +30,12 @@
         <entry file="file://$PROJECT_DIR$/app/views/breweries/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="19" column="4" selection-start="294" selection-end="294" vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="435">
-              <folding />
+              <folding>
+                <marker date="1389953533000" expanded="true" signature="37:66" placeholder="..." />
+                <marker date="1389953533000" expanded="true" signature="71:121" placeholder="..." />
+                <marker date="1389953533000" expanded="true" signature="126:196" placeholder="..." />
+                <marker date="1389953533000" expanded="true" signature="201:293" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -63,10 +67,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="3" selection-start="1306" selection-end="1306" vertical-scroll-proportion="0.7721519" vertical-offset="505" max-vertical-offset="900">
+            <state line="54" column="3" selection-start="1306" selection-end="1306" vertical-scroll-proportion="0.0" vertical-offset="505" max-vertical-offset="900">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="production.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="30" selection-start="1268" selection-end="1268" vertical-scroll-proportion="0.7258065" vertical-offset="165" max-vertical-offset="1290">
               <folding />
             </state>
           </provider>
@@ -103,6 +116,7 @@
         <option value="$PROJECT_DIR$/app/views/breweries/panimot.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/breweries_controller.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/config/environments/production.rb" />
       </list>
     </option>
   </component>
@@ -168,6 +182,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ratebeer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ratebeer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ratebeer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ratebeer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="environments" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -587,7 +633,12 @@
     <entry file="file://$PROJECT_DIR$/app/views/breweries/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="4" selection-start="294" selection-end="294" vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="435">
-          <folding />
+          <folding>
+            <marker date="1389953533000" expanded="true" signature="37:66" placeholder="..." />
+            <marker date="1389953533000" expanded="true" signature="71:121" placeholder="..." />
+            <marker date="1389953533000" expanded="true" signature="126:196" placeholder="..." />
+            <marker date="1389953533000" expanded="true" signature="201:293" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -635,7 +686,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="3" selection-start="1306" selection-end="1306" vertical-scroll-proportion="0.7721519" vertical-offset="505" max-vertical-offset="900">
+        <state line="54" column="3" selection-start="1306" selection-end="1306" vertical-scroll-proportion="0.0" vertical-offset="505" max-vertical-offset="900">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="30" selection-start="1268" selection-end="1268" vertical-scroll-proportion="0.7258065" vertical-offset="165" max-vertical-offset="1290">
           <folding />
         </state>
       </provider>
