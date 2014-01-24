@@ -1,0 +1,42 @@
+irb(main):006:0> b = Brewery.create name:"BrewDog", year:2007
+   (0.0ms)  begin transaction
+  SQL (0.3ms)  INSERT INTO "breweries" ("created_at", "name", "updated_at", "year") VALUES (?, ?, ?, ?)  [["created_at", Fri, 24 Jan 2014 10:18:23 UTC +00:00], ["name", "BrewDog"], ["updated_at", Fri, 24 Jan 2014 10:18:23 UTC +00:00], ["year", 2007]]
+   (7.6ms)  commit transaction
+=> #<Brewery id: 5, name: "BrewDog", year: 2007, created_at: "2014-01-24 10:18:23", updated_at: "2014-01-24 10:18:23">
+irb(main):007:0> b.beers.create name:"Punk IPA", style:"IPA"
+   (0.1ms)  begin transaction
+  SQL (0.5ms)  INSERT INTO "beers" ("brewery_id", "created_at", "name", "style", "updated_at") VALUES (?, ?, ?, ?, ?)  [["brewery_id", 5], ["created_at", Fri, 24 Jan 2014 10:18:46 UTC +00:00], ["name", "Punk IPA"], ["style", "IPA"], ["updated_at", Fri, 24 Jan 2014 10:18:46 UTC +00:00]]
+   (7.7ms)  commit transaction
+=> #<Beer id: 14, name: "Punk IPA", style: "IPA", brewery_id: 5, created_at: "2014-01-24 10:18:46", updated_at: "2014-01-24 10:18:46">
+irb(main):008:0> b.beers.create name:"Nanny State", style:"lowalcohol"
+   (0.1ms)  begin transaction
+  SQL (0.9ms)  INSERT INTO "beers" ("brewery_id", "created_at", "name", "style", "updated_at") VALUES (?, ?, ?, ?, ?)  [["brewery_id", 5], ["created_at", Fri, 24 Jan 2014 10:19:20 UTC +00:00], ["name", "Nanny State"], ["style", "lowalcohol"], ["updated_at", Fri, 24 Jan 2014 10:19:20 UTC +00:00]]
+   (7.7ms)  commit transaction
+=> #<Beer id: 15, name: "Nanny State", style: "lowalcohol", brewery_id: 5, created_at: "2014-01-24 10:19:20", updated_at: "2014-01-24 10:19:20">
+irb(main):009:0> b1 = b.beers.first
+  Beer Load (0.2ms)  SELECT "beers".* FROM "beers" WHERE "beers"."brewery_id" = ? ORDER BY "beers"."id" ASC LIMIT 1  [["brewery_id", 5]]
+=> #<Beer id: 14, name: "Punk IPA", style: "IPA", brewery_id: 5, created_at: "2014-01-24 10:18:46", updated_at: "2014-01-24 10:18:46">
+irb(main):010:0> b2 = b.beers.last
+  Beer Load (0.3ms)  SELECT "beers".* FROM "beers" WHERE "beers"."brewery_id" = ? ORDER BY "beers"."id" DESC LIMIT 1  [["brewery_id", 5]]
+=> #<Beer id: 15, name: "Nanny State", style: "lowalcohol", brewery_id: 5, created_at: "2014-01-24 10:19:20", updated_at: "2014-01-24 10:19:20">
+irb(main):011:0> b1.ratings.create score:13
+   (0.1ms)  begin transaction
+  SQL (1.1ms)  INSERT INTO "ratings" ("beer_id", "created_at", "score", "updated_at") VALUES (?, ?, ?, ?)  [["beer_id", 14], ["created_at", Fri, 24 Jan 2014 10:20:23 UTC +00:00], ["score", 13], ["updated_at", Fri, 24 Jan 2014 10:20:23 UTC +00:00]]
+   (7.6ms)  commit transaction
+=> #<Rating id: 4, score: 13, beer_id: 14, created_at: "2014-01-24 10:20:23", updated_at: "2014-01-24 10:20:23">
+irb(main):012:0> b1.ratings.create score:23
+   (0.1ms)  begin transaction
+  SQL (0.4ms)  INSERT INTO "ratings" ("beer_id", "created_at", "score", "updated_at") VALUES (?, ?, ?, ?)  [["beer_id", 14], ["created_at", Fri, 24 Jan 2014 10:20:32 UTC +00:00], ["score", 23], ["updated_at", Fri, 24 Jan 2014 10:20:32 UTC +00:00]]
+   (7.7ms)  commit transaction
+=> #<Rating id: 5, score: 23, beer_id: 14, created_at: "2014-01-24 10:20:32", updated_at: "2014-01-24 10:20:32">
+irb(main):013:0> b2.ratings.create score:15
+   (0.1ms)  begin transaction
+  SQL (1.2ms)  INSERT INTO "ratings" ("beer_id", "created_at", "score", "updated_at") VALUES (?, ?, ?, ?)  [["beer_id", 15], ["created_at", Fri, 24 Jan 2014 10:21:02 UTC +00:00], ["score", 15], ["updated_at", Fri, 24 Jan 2014 10:21:02 UTC +00:00]]
+   (7.6ms)  commit transaction
+=> #<Rating id: 6, score: 15, beer_id: 15, created_at: "2014-01-24 10:21:02", updated_at: "2014-01-24 10:21:02">
+irb(main):014:0> b2.ratings.create score:9
+   (0.1ms)  begin transaction
+  SQL (0.3ms)  INSERT INTO "ratings" ("beer_id", "created_at", "score", "updated_at") VALUES (?, ?, ?, ?)  [["beer_id", 15], ["created_at", Fri, 24 Jan 2014 10:21:12 UTC +00:00], ["score", 9], ["updated_at", Fri, 24 Jan 2014 10:21:12 UTC +00:00]]
+   (7.5ms)  commit transaction
+=> #<Rating id: 7, score: 9, beer_id: 15, created_at: "2014-01-24 10:21:12", updated_at: "2014-01-24 10:21:12">
+irb(main):015:0>
