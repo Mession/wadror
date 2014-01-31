@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Beer club:</strong>
+  <%= BeerClub.find(@membership.beer_club_id).name %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= User.find(@membership.user_id).username %>
+</p>
+
+<%= link_to 'Edit', edit_membership_path(@membership) %> |
+<%= link_to 'Back', memberships_path %>
