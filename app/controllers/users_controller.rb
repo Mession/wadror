@@ -54,12 +54,14 @@ class UsersController < ApplicationController
   # DELETE /users/1
   # DELETE /users/1.json
   def destroy
-    @user.destroy if current_user == @user
-    reset_session
-    Rating.where(user_id:nil).each{ |r| r.delete }
-    Rating.all.select{ |r| r.user == nil }.each{ |r| r.delete }
-    Membership.where(user_id:nil).each{ |m| m.delete }
-    Membership.all.select{ |m| m.user == nil }.each{ |m| m.delete }
+    if current_user == @user
+      @user.destroy
+      reset_session
+    end
+    #Rating.where(user_id:nil).each{ |r| r.delete }
+    #Rating.all.select{ |r| r.user == nil }.each{ |r| r.delete }
+    #Membership.where(user_id:nil).each{ |m| m.delete }
+    #Membership.all.select{ |m| m.user == nil }.each{ |m| m.delete }
     respond_to do |format|
       format.html { redirect_to users_url }
       format.json { head :no_content }

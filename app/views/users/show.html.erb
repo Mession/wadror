@@ -10,6 +10,14 @@
   <% else %>
       has made <%= pluralize(@user.ratings.count, 'rating') %>, average rating given
       <%= @user.average_rating %>
+      <br> Favorite beer:
+      <%= link_to @user.favorite_beer, @user.favorite_beer %>
+      <br> Favorite style:
+      <%= @user.favorite_style %>
+      <br> Favorite brewery:
+      <%= link_to @user.favorite_brewery.name, @user.favorite_brewery %>
+      <br>
+      <br>
       <strong>Ratings</strong>
       <ul>
         <% @user.ratings.each do |rating| %>
@@ -19,6 +27,7 @@
               <% end %>
         <% end %>
       </ul>
+
   <% end %>
 </p>
 
@@ -34,6 +43,6 @@
 </p>
 
 <% if @user == current_user %>
-    <%= link_to 'Edit', edit_user_path(@user) %> |
-    <%= link_to 'Destroy', user_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= link_to 'Change password', edit_user_path(@user) %> |
+    <%= link_to 'Delete account', user_path, method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>
