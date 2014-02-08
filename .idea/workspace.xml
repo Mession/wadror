@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42b844d0-7647-42c8-922e-e79173b6370d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.travis.yml" afterPath="$PROJECT_DIR$/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.rdoc" afterPath="$PROJECT_DIR$/README.rdoc" />
     </list>
     <ignored path="ratebeer.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,19 +68,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".travis.yml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name=".travis.yml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="24" selection-start="439" selection-end="439" vertical-scroll-proportion="0.5529801" vertical-offset="13" max-vertical-offset="330">
+            <state line="12" column="24" selection-start="439" selection-end="439" vertical-scroll-proportion="0.0" vertical-offset="13" max-vertical-offset="330">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.rdoc" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="README.rdoc" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.rdoc">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="127" selection-start="203" selection-end="203" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="135">
+            <state line="4" column="112" selection-start="316" selection-end="316" vertical-scroll-proportion="0.1904762" vertical-offset="0" max-vertical-offset="315">
               <folding />
             </state>
           </provider>
@@ -189,8 +189,8 @@
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/spec/spec_helper.rb" />
         <option value="$PROJECT_DIR$/spec/models/brewery_spec.rb" />
-        <option value="$PROJECT_DIR$/README.rdoc" />
         <option value="$PROJECT_DIR$/.travis.yml" />
+        <option value="$PROJECT_DIR$/README.rdoc" />
       </list>
     </option>
   </component>
@@ -921,16 +921,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.rdoc">
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="127" selection-start="203" selection-end="203" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="135">
+        <state line="12" column="24" selection-start="439" selection-end="439" vertical-scroll-proportion="0.0" vertical-offset="13" max-vertical-offset="330">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.travis.yml">
+    <entry file="file://$PROJECT_DIR$/README.rdoc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="24" selection-start="439" selection-end="439" vertical-scroll-proportion="0.5529801" vertical-offset="13" max-vertical-offset="330">
+        <state line="4" column="112" selection-start="316" selection-end="316" vertical-scroll-proportion="0.1904762" vertical-offset="0" max-vertical-offset="315">
           <folding />
         </state>
       </provider>
