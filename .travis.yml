@@ -1,10 +1,16 @@
 language: ruby
-
 rvm:
- - 2.0.0
-
+- 2.0.0
 script:
- - bundle exec rake db:migrate --trace
- - RAILS_ENV=test bundle exec rake db:migrate --trace
- - bundle exec rake db:test:prepare
- - bundle exec rspec -fd spec/
+- bundle exec rake db:migrate --trace
+- RAILS_ENV=test bundle exec rake db:migrate --trace
+- bundle exec rake db:test:prepare
+- bundle exec rspec -fd spec/
+deploy:
+  provider: heroku
+  api_key:
+    secure: E4sR7uRKI5MQxQybDBf/cvFFpWw5UMkrW5BwCzbG6W+i8+lR8lNgOyKg745XQq25yO/5OABo5AhMR9mRyKmaIQCKAMl84/q+dsV0QJeCTzRMe+1OeUsMfS8HrVnSExPx1lkqACfxSchz5qzSUl0WXfNbMFrRYxK5uauUJ0sDoXw=
+  run: "rake db:migrate"
+  app: dry-retreat-5205
+  on:
+    repo: Mession/wadror
