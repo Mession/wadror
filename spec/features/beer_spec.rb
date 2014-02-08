@@ -4,6 +4,11 @@ include OwnTestHelper
 describe "Beer" do
   let!(:brewery) { FactoryGirl.create :brewery, name:"Koff" }
 
+  before :each do
+    FactoryGirl.create :user
+    sign_in(username:"Pekka", password:"Foobar1")
+  end
+
   it "is saved when name is correct" do
     visit new_beer_path
     fill_in('beer[name]', with:'Iso 3')

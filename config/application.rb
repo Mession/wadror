@@ -13,6 +13,8 @@ module Ratebeer
 
     # config.autoload_paths += Dir["#{Rails.root}/lib"]
 
+    # config.i18n.enforce_available_locales = false
+
     # omat end
 
     # Settings in config/environments/* take precedence over those specified here.

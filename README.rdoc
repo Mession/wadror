@@ -2,4 +2,5 @@ Linkki Heroku-instanssiin:
 http://dry-retreat-5205.herokuapp.com/breweries
 
 {<img src="https://travis-ci.org/Mession/wadror.png?branch=master" alt="Build Status" />}[https://travis-ci.org/Mession/wadror]
+
 {<img src="https://codeclimate.com/github/Mession/wadror.png" />}[https://codeclimate.com/github/Mession/wadror]
