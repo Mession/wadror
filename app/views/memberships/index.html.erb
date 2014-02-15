@@ -17,8 +17,8 @@
         <td><%= BeerClub.find(membership.beer_club_id).name %></td>
         <td><%= User.find(membership.user_id).username %></td>
         <td><%= link_to 'Show', membership %></td>
-        <td><%= link_to 'Edit', edit_membership_path(membership) %></td>
-        <td><%= link_to 'Destroy', membership, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_membership_path(membership) if current_user == membership.user %></td>
+        <td><%= link_to 'Destroy', membership, method: :delete, data: { confirm: 'Are you sure?' } if current_user == membership.user %></td>
       </tr>
     <% end %>
   </tbody>

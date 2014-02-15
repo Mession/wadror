@@ -11,7 +11,7 @@ module Ratebeer
 
     # omat
 
-    # config.autoload_paths += Dir["#{Rails.root}/lib"]
+    config.autoload_paths += Dir["#{Rails.root}/lib"]
 
     # config.i18n.enforce_available_locales = false
 

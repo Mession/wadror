@@ -91,16 +91,20 @@ describe User do
     end
 
     it "is the one with highest ratings" do
-      lager = create_lager(25, user)
-      weizen = create_weizen(15, user)
+      style = FactoryGirl.create(:style)
+      lager = create_beer(25, user, style)
+      style = FactoryGirl.create(:style2)
+      weizen = create_beer(15, user, style)
 
       expect(user.favorite_style).to eq(lager.style)
     end
 
     it "is not the highest rated, but the one with highest average rating" do
-      lager = create_lager(10, user)
-      weizen = create_weizen(11, user)
-      weizen2 = create_weizen(5, user)
+      style = FactoryGirl.create(:style)
+      lager = create_beer(10, user, style)
+      style = FactoryGirl.create(:style2)
+      weizen = create_beer(11, user, style)
+      weizen2 = create_beer(5, user, style)
 
       expect(user.favorite_style).to eq(lager.style)
     end
@@ -148,14 +152,8 @@ def create_brewery(score, user)
   brewery
 end
 
-def create_lager(score, user)
-  beer = FactoryGirl.create(:beer, style:"Lager")
-  FactoryGirl.create(:rating, score:score, beer:beer, user:user)
-  beer
-end
-
-def create_weizen(score, user)
-  beer = FactoryGirl.create(:beer, style:"Weizen")
+def create_beer(score, user, style)
+  beer = FactoryGirl.create(:beer, style:style)
   FactoryGirl.create(:rating, score:score, beer:beer, user:user)
   beer
 end

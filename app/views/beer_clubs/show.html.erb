@@ -6,8 +6,7 @@
 </p>
 
 <p>
-  <strong>Founded:</strong>
-  <%= @beer_club.founded %>
+  Founded <%= @beer_club.founded %>
 </p>
 
 <p>
@@ -18,9 +17,21 @@
 <p>
   <strong>Members:</strong>
   <% @beer_club.members.each do |member| %>
-    <%= link_to member.username, member %>
+    <ul>
+        <%= link_to member.username, member %>
+    </ul>
   <% end %>
 </p>
 
-<%= link_to('Edit', edit_beer_club_path(@beer_club)) if current_user %>
-<%= link_to('Destroy', @beer_club, method: :delete, data: { confirm: 'Are you sure?' }) if current_user %>
+<% if current_user %>
+    <% if Membership.all.select {|m| m.user_id == current_user.id && m.beer_club_id == @beer_club.id} == [] %>
+        <%= form_for(@membership) do |f| %>
+            <%= f.hidden_field :beer_club_id %>
+            <%= f.hidden_field :user_id %>
+            <%= f.submit value:"Join the club" %>
+        <% end %>
+    <% end %>
+
+    <%= link_to('Edit', edit_beer_club_path(@beer_club)) %>
+    <%= link_to('Destroy', @beer_club, method: :delete, data: { confirm: 'Are you sure?' }) %>
+<% end %>
