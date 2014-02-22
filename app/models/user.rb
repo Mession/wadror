@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   validates :password, length: { minimum: 4 }, format: /\A(?=.*\d)(?=.*[A-Z]).{4,}\z/
 
   has_many :ratings, dependent: :destroy
-  has_many :beers, through: :ratings
+  has_many :beers, -> { uniq }, through: :ratings
   has_many :memberships, dependent: :destroy
   has_many :beer_clubs, through: :memberships
 

@@ -9,7 +9,7 @@
     has not made any ratings yet
   <% else %>
       has made <%= pluralize(@user.ratings.count, 'rating') %>, average rating given
-      <%= @user.average_rating %>
+      <%= round(@user.average_rating) %>
       <br> Favorite beer:
       <%= link_to @user.favorite_beer, @user.favorite_beer %>
       <br> Favorite style:
